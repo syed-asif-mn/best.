@@ -2,10 +2,8 @@
   font-family: monospace;
   font-size: clamp(20px, 1.25vw, 2rem);
   text-align: center;
-  /* margin-top: 1rem; */
-  padding: 0.5rem;
+  padding: 0 1rem 1rem;
   align-self:flex-end;
-  margin-top: 275px;
 }
 
 .oops-container{
