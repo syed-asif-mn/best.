@@ -58,13 +58,13 @@ export default function App() {
       .catch((err) => console.log(err));
   };
 
-  const element = () => {
+  const element = (text) => {
     return (
       <Home
         posts={posts}
         showSearchBar={showSearchBar}
         showFavoriteCards={showFavoriteCards}
-        searchText={searchText}
+        searchText={text}
         updateText={updateText}
       />
     );
@@ -77,9 +77,9 @@ export default function App() {
           <BrowserRouter>
             <NavBar showFavs={showFavorites} showSearch={showSearch} />
             <Routes>
-              <Route path="/" element={element()}></Route>
-              <Route path="/search" element={element()}></Route>
-              <Route path="/favorite" element={element()}></Route>
+              <Route path="/" element={element('')}></Route>
+              <Route path="/search" element={element(searchText)}></Route>
+              <Route path="/favorite" element={element('')}></Route>
               <Route
                 path="contribute"
                 element={<Contribute inputData={inputData} />}
