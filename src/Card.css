@@ -1,0 +1,70 @@
+.card {
+  background: linear-gradient(
+    50deg,
+    rgba(229, 170, 112, 0.3),
+    rgba(229, 170, 112, 0.7),
+    rgba(229, 170, 112, 0.9)
+  );
+  font-family: poppins;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 2px 4px, #e6be8a 0px 7px 20px -3px,
+    #e6be8a 0px -3px 0px inset;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+button {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+  background: none;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.fav {
+  animation: dub 0.5s ease-in-out;
+}
+
+.fav::after {
+  content: '❤️';
+}
+
+.notfav::after {
+  content: '🤍';
+}
+
+.small-elements {
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+@keyframes dub {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h1:hover {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.small-elements:hover {
+  cursor: pointer;
+}

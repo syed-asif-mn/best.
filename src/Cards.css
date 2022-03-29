@@ -1,0 +1,103 @@
+.oops{
+  font-family: monospace;
+  font-size: clamp(20px, 1.25vw, 2rem);
+  text-align: center;
+  /* margin-top: 1rem; */
+  padding: 0.5rem;
+  align-self:flex-end;
+  margin-top: 275px;
+}
+
+.oops-container{
+  padding-top: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  font-family: poppins;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, #e6be8a 0px 7px 20px -3px, #e6be8a 0px -3px 0px inset;
+}
+
+.card:hover{
+  transform: scale(1.02);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+button{
+  margin-left: 0.5rem;
+  font-size: 2rem;
+  background: none;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.fav{
+  animation: dub 0.5s ease-in-out;
+}
+
+.fav::after{
+  content: "❤️";
+}
+
+.notfav::after{
+  content: "🖤";
+}
+
+.small-elements{
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem ;
+}
+
+@keyframes dub{
+    from {transform: scale(0.7);}
+    to {transform: scale(2);}
+}
+
+h1{
+  font-size: 1.5rem;
+}
+
+h1:hover{
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+
+.small-elements:hover{
+cursor: pointer;
+}
+
+
+.loader_inner{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  background-color: #222;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.loader span {
+  background: url(https://learndesigntutorial.com/wp-content/uploads/2022/01/wave.svg);
+  background-size: 100px;
+  background-repeat: repeat;
+  background-position: -400px 0;
+  width: 100%;
+  height: 285px;
+  display: inline-block;
+  animation: waveLine 5s linear 0s infinite;
+}
+@keyframes waveLine{
+  0%{
+    background-position: 0 0;
+  }
+}

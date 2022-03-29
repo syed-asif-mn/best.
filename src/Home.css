@@ -1,0 +1,7 @@
+.header{
+  font-size: clamp(60px, 30vw, 100px);
+  padding-left: clamp(20px, 2vw, 1rem);
+  color:#e5aa70;
+  cursor:pointer;
+  font-family: 'Varela Round', sans-serif;
+}
