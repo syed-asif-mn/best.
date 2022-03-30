@@ -16,7 +16,6 @@
     #e6be8a 0px -3px 0px inset;
   background-size: 250% 250%;
   animation: animateBg 15s ease infinite;
-  margin-bottom: -0.5rem;
 }
 
 .card:hover {
