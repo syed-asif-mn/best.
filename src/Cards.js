@@ -8,7 +8,7 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
   const showCards = (source, fav) => {
     if (!fav) source = shuffle(source);
     return (
-      <div>
+      <div className="cards">
         {source.map((obj, key) => (
           <div key={key}>
             <Card fav={fav} {...obj} setFavCards={setFavoriteCards} />
@@ -38,10 +38,16 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
   if (searchText !== '') {
     var filteredLyric = lyricData.filter(
       (item) =>
-        (item['lyric'].replace(/\s/g, '').toLowerCase()).includes((searchText.replace(/\s/g, '').toLowerCase())) ||
-        item['source'].replace(/\s/g, '').toLowerCase().includes(searchText.replace(/\s/g, '').toLowerCase())
+        item['lyric']
+          .replace(/\s/g, '')
+          .toLowerCase()
+          .includes(searchText.replace(/\s/g, '').toLowerCase()) ||
+        item['source']
+          .replace(/\s/g, '')
+          .toLowerCase()
+          .includes(searchText.replace(/\s/g, '').toLowerCase())
     );
-   
+
     if (filteredLyric.length == 0) {
       return (
         <div>
@@ -50,7 +56,7 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
           </div>
           {showCards(lyricData, false)}
         </div>
-      )
+      );
     } else {
       return showCards(filteredLyric, false);
     }
