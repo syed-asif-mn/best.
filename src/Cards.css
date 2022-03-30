@@ -14,11 +14,6 @@
   justify-content: center;
 }
 
-.cards{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .loader-inner {
   width: 200px;
   height: 200px;
