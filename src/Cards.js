@@ -36,14 +36,12 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
   };
 
   if (searchText !== '') {
-    var searchSource = lyricData;
-    if (showFavs) searchSource = FavCards;
-    var filteredLyric = searchSource.filter(
+    var filteredLyric = lyricData.filter(
       (item) =>
-        item['lyric'].toLowerCase().includes(searchText) ||
-        item['source'].toLowerCase().includes(searchText)
+        (item['lyric'].replace(/\s/g, '').toLowerCase()).includes((searchText.replace(/\s/g, '').toLowerCase())) ||
+        item['source'].replace(/\s/g, '').toLowerCase().includes(searchText.replace(/\s/g, '').toLowerCase())
     );
-
+   
     if (filteredLyric.length == 0) {
       return (
         <div>
@@ -52,7 +50,7 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
           </div>
           {showCards(lyricData, false)}
         </div>
-      );
+      )
     } else {
       return showCards(filteredLyric, false);
     }

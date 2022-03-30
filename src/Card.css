@@ -1,9 +1,10 @@
 .card {
   background: linear-gradient(
     50deg,
-    rgba(229, 170, 112, 0.3),
-    rgba(229, 170, 112, 0.7),
-    rgba(229, 170, 112, 0.9)
+    #e5aa704d,
+    rgba(229, 170, 112, 0.702),
+    rgba(229, 170, 112, 0.9),
+    white
   );
   font-family: poppins;
   margin: 2rem;
@@ -13,6 +14,8 @@
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.7) 0px 2px 4px, #e6be8a 0px 7px 20px -3px,
     #e6be8a 0px -3px 0px inset;
+  background-size: 250% 250%;
+  animation: animateBg 15s ease infinite;
 }
 
 .card:hover {
@@ -48,7 +51,7 @@ button {
   cursor: pointer;
 }
 
-h1{
+h1 {
   cursor: pointer;
   font-size: 1.5rem;
 }
@@ -59,5 +62,17 @@ h1{
   }
   to {
     transform: scale(2);
+  }
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0% 97%;
+  }
+  50% {
+    background-position: 100% 4%;
+  }
+  100% {
+    background-position: 0% 97%;
   }
 }
