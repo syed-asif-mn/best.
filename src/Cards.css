@@ -2,7 +2,7 @@
   font-family: monospace;
   font-size: clamp(20px, 1.25vw, 2rem);
   text-align: center;
-  padding: 0 1rem 1rem;
+  padding-top: 1rem;
   align-self:flex-end;
 }
 
@@ -16,16 +16,15 @@
 
 .card{
   font-family: poppins;
-  margin: 2rem;
+  /* margin: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
   padding: 2rem;
   border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, #e6be8a 0px 7px 20px -3px, #e6be8a 0px -3px 0px inset;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, #e6be8a 0px 7px 20px -3px, #e6be8a 0px -3px 0px inset; */
 }
 
 .card:hover{
-  transform: scale(1.02);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 

@@ -8,7 +8,7 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
   const showCards = (source, fav) => {
     if (!fav) source = shuffle(source);
     return (
-      <div className="Cards-main">
+      <div>
         {source.map((obj, key) => (
           <div key={key}>
             <Card fav={fav} {...obj} setFavCards={setFavoriteCards} />
@@ -45,22 +45,14 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
     );
 
     if (filteredLyric.length == 0) {
-      if (showFavs)
-        return (
+      return (
+        <div>
           <div className="oops">
-              Oops! Your search did not yield results. Try hiding favorites to
-              search from all the available cards
-            </div>
-        );
-      else
-        return (
-          <div>
-            <div className="oops">
-              Oops! Your search did not yield results. You might like these:
-            </div>
-            {showCards(lyricData, false)}
+            Oops! Your search did not yield results. You might like these:
           </div>
-        );
+          {showCards(lyricData, false)}
+        </div>
+      );
     } else {
       return showCards(filteredLyric, false);
     }
@@ -70,14 +62,14 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
     if (FavCards.length == 0) {
       return (
         <div class="oops-container">
+          <div className="oops">
+            You have not liked anything yet. Don't forget to hit ❤️ for your
+            favorite lyrics.
+          </div>
           <div class="loader">
             <div class="loader_inner">
               <span></span>
             </div>
-          </div>
-          <div className="oops">
-            You have not liked anything yet. Don't forget to hit ❤️ for your
-            favorite lyrics.
           </div>
         </div>
       );
