@@ -3,7 +3,7 @@ import './Loader.css';
 
 const Loader = () => (
   <div class="loader-page">
-  <div class="container">
+  <div class="loader-container">
     <div class="preloader">
       <span></span>
       <span></span>

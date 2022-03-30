@@ -29,11 +29,6 @@
   color: white;
 }
 
-.main {
-  padding: 16px;
-  margin-bottom: 30px;
-}
-
 .active{
   border-bottom: solid 0.1rem;
   color:white !important;
