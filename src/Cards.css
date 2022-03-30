@@ -6,17 +6,16 @@
   align-self: flex-end;
 }
 
-.cards{
-  display: flex;
-  flex-direction: column;
-}
-
 .loader {
   display: flex;
   padding: 1rem;
   width: 100%;
   align-items: center;
   justify-content: center;
+}
+
+.cards{
+  display: grid;
 }
 
 .loader-inner {
@@ -45,16 +44,27 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 600px) {
   .cards {
-    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 992px){
   .cards {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+@media only screen and (min-width: 1200px){
+  .cards {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
