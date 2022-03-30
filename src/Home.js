@@ -10,7 +10,7 @@ const searchEnabled = (updateText) => {
 const Home = ({posts, showSearchBar, showFavoriteCards, searchText, updateText}) => {
  
   return (
-      <div>
+      <div className="home">
       <div className="header" onClick = {()=>window.location.reload()}>best.</div>
         {showSearchBar ? searchEnabled(updateText): null}
         <Cards lyricData={posts} searchText={searchText} showFavs={showFavoriteCards} />
