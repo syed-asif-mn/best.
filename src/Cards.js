@@ -61,13 +61,13 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
   if (showFavs) {
     if (FavCards.length == 0) {
       return (
-        <div class="oops-container">
+        <div>
           <div className="oops">
             You have not liked anything yet. Don't forget to hit ❤️ for your
             favorite lyrics.
           </div>
-          <div class="loader">
-            <div class="loader_inner">
+          <div className="loader">
+            <div className="loader-inner">
               <span></span>
             </div>
           </div>

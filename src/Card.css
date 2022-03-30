@@ -37,7 +37,7 @@ button {
 }
 
 .notfav::after {
-  content: '🤍';
+  content: '🖤';
 }
 
 .small-elements {
@@ -45,6 +45,12 @@ button {
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
+  cursor: pointer;
+}
+
+h1{
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 @keyframes dub {
@@ -54,17 +60,4 @@ button {
   to {
     transform: scale(2);
   }
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-
-h1:hover {
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-
-.small-elements:hover {
-  cursor: pointer;
 }

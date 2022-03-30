@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './Card.css';
-import { background } from './Helper/Backgrounds.js';
 
 var favArray = [];
+
+const searchSource = (id) => {
+  window.open(`https://www.google.com/search?q=${id}`);
+};
 
 const Card = (props) => {
   const [isFavorite, setFavorite] = useState(props.fav);
@@ -21,15 +24,8 @@ const Card = (props) => {
     props.setFavCards(favArray);
   };
 
-  const searchSource = (id) => {
-    window.open(`https://www.google.com/search?q=${id}`);
-  };
-
   return (
-    <div
-      key={props.key}
-      className="card"
-    >
+    <div key={props.key} className="card">
       <h1
         onClick={() => {
           searchSource(props.source);

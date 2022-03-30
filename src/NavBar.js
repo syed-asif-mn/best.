@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 const NavBar = ({ showSearch, showFavs }) => {
@@ -10,30 +10,30 @@ const NavBar = ({ showSearch, showFavs }) => {
 
   return (
     <div className="navbar">
-      <NavLink
+      <Link
         to=""
         activeClassName="active"
         onClick={() => updateStates(false, false)}
       >
-        <i class="fi fi-rr-home"></i>
-      </NavLink>
-      <NavLink
+        <i className="fi fi-rr-home"></i>
+      </Link>
+      <Link
         to="search"
         onClick={() => updateStates(true, false)}
         activeClassName="active"
       >
-        <i class="fi fi-rr-search"></i>
-      </NavLink>
-      <NavLink
+        <i className="fi fi-rr-search"></i>
+      </Link>
+      <Link
         to="favorite"
         onClick={() => updateStates(false, true)}
         activeClassName="active"
       >
-        <i class="fi fi-rr-heart"></i>
-      </NavLink>
-      <NavLink to="contribute" activeClassName="active">
-        <i class="fi fi-rr-edit"></i>
-      </NavLink>
+        <i className="fi fi-rr-heart"></i>
+      </Link>
+      <Link to="contribute" activeClassName="active">
+        <i className="fi fi-rr-edit"></i>
+      </Link>
     </div>
   );
 };
