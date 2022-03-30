@@ -9,8 +9,8 @@ const searchSource = (id) => {
 
 const Card = (props) => {
   const [isFavorite, setFavorite] = useState(props.fav);
-
-  const handleToggle = (props) => {
+  
+   const handleToggle = (props) => {
     var index = -1;
     index = favArray.findIndex((x) => x.lyric === props.lyric);
     if (index != -1) favArray.splice(index, 1);
@@ -20,6 +20,7 @@ const Card = (props) => {
     if ((props.fav && !isFavorite) || (!props.fav && isFavorite)) {
       favArray.splice(index, 1);
     }
+    
     setFavorite(!isFavorite);
     props.setFavCards(favArray);
   };

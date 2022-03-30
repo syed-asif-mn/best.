@@ -5,13 +5,17 @@ import './Cards.css';
 var FavCards = [];
 
 const Cards = ({ lyricData, searchText, showFavs }) => {
-  const showCards = (source, fav) => {
-    if (!fav) source = shuffle(source);
+  const showCards = (source) => {
+    source = shuffle(source);
     return (
       <div className="cards">
         {source.map((obj, key) => (
           <div key={key}>
-            <Card fav={fav} {...obj} setFavCards={setFavoriteCards} />
+            <Card
+              fav={showFavs ? true : false}
+              {...obj}
+              setFavCards={setFavoriteCards}
+            />
           </div>
         ))}
       </div>
@@ -54,11 +58,11 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
           <div className="oops">
             Oops! Your search did not yield results. You might like these:
           </div>
-          {showCards(lyricData, false)}
+          {showCards(lyricData)}
         </div>
       );
     } else {
-      return showCards(filteredLyric, false);
+      return showCards(filteredLyric);
     }
   }
 
@@ -78,14 +82,14 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
         </div>
       );
     } else {
-      return <div>{showCards(FavCards, true)}</div>;
+      return <div>{showCards(FavCards)}</div>;
     }
   }
 
   if (searchText == '' || !showFavs) {
     return (
       <div>
-        <div>{showCards(lyricData, false)}</div>
+        <div>{showCards(lyricData)}</div>
       </div>
     );
   }
