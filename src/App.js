@@ -7,7 +7,7 @@ import Home from './Home.js';
 import Loader from './Loader.js';
 import Contribute from './Hamburger/Contribute.js';
 
-const API_URL = 'https://alert-boatneck-butterkase.glitch.me/lyricdata';
+const API_URL = 'https://best-lyrics.glitch.me/lyricdata';
 
 export default function App() {
   const [showSearchBar, setShowSearchBar] = useState(false);
