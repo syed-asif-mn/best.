@@ -14,6 +14,13 @@
   justify-content: center;
 }
 
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+
 .loader-inner {
   width: 200px;
   height: 200px;
@@ -37,5 +44,19 @@
 @keyframes waveLine {
   0% {
     background-position: 0 0;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(5, 0.75fr);
   }
 }
