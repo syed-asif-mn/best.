@@ -6,6 +6,11 @@
   align-self: flex-end;
 }
 
+.cards{
+  display: flex;
+  flex-direction: column;
+}
+
 .loader {
   display: flex;
   padding: 1rem;
@@ -40,7 +45,7 @@
   }
 }
 
-@media (min-width: 960px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
