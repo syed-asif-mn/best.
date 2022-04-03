@@ -69,7 +69,7 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
   if (showFavs) {
     if (FavCards.length == 0) {
       return (
-        <div>
+        <div className="oops-fav">
           <div className="oops">
             You have not liked anything yet. Don't forget to hit ❤️ for your
             favorite lyrics.

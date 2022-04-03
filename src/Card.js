@@ -3,6 +3,13 @@ import './Card.css';
 
 var favArray = [];
 
+const background = () => {
+  var r = Math.round(Math.random() * 255);
+  var g = Math.round(Math.random() * 255);
+  var b = Math.round(Math.random() * 255);
+return `rgba(${r},${g},${b},0.2)`;
+}
+
 const searchSource = (id) => {
   window.open(`https://www.google.com/search?q=${id}`);
 };
@@ -26,7 +33,7 @@ const Card = (props) => {
   };
 
   return (
-    <div key={props.key} className="card">
+    <div key={props.key} className="card" style={{background: background()}}>
       <h1
         onClick={() => {
           searchSource(props.source);
