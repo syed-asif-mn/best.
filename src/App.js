@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './style.css';
 import axios from 'axios';
 import NavBar from './NavBar.js';
-import Home from './Home.js';
+const Home = React.lazy(() => import('./Home.js'));
 import Loader from './Loader.js';
 import Contribute from './Hamburger/Contribute.js';
 
@@ -50,13 +50,15 @@ export default function App() {
 
   const element = (text) => {
     return (
-      <Home
+      <Suspense fallback={ <Loader />}>
+       <Home
         posts={posts}
         showSearchBar={showSearchBar}
         showFavoriteCards={showFavoriteCards}
         searchText={text}
         updateText={updateText}
       />
+    </Suspense>
     );
   };
 
