@@ -78,7 +78,6 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
           </div>
           <div className="loader">
             <div className="loader-inner">
-              <span></span>
             </div>
           </div>
         </div>
