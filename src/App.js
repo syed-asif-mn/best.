@@ -67,17 +67,17 @@ export default function App() {
       {posts.length > 0 ? (
         <div>
           <BrowserRouter>
-            <Suspense fallback={<Loader />}>
-              <NavBar showFavs={showFavorites} showSearch={showSearch} />
-              <Routes>
-                <Route path="" element={element('')}></Route>
-                <Route path="search" element={element(searchText)}></Route>
-                <Route path="favorite" element={element('')}></Route>
-                <Route
-                  path="contribute"
-                  element={<Contribute inputData={inputData} />}
-                ></Route>
-              </Routes>
+          <Suspense fallback={<div></div>}>
+            <NavBar showFavs={showFavorites} showSearch={showSearch} />
+            <Routes>
+              <Route path="" element={element('')}></Route>
+              <Route path="search" element={element(searchText)}></Route>
+              <Route path="favorite" element={element('')}></Route>
+              <Route
+                path="contribute"
+                element={<Contribute inputData={inputData} />}
+              ></Route>
+            </Routes>
             </Suspense>
           </BrowserRouter>
         </div>

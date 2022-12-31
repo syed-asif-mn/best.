@@ -20,6 +20,7 @@
 
 .loader-inner {
   content: url('./fav.svg');
+  width: 30vh;
 }
 
 .cards {
@@ -31,16 +32,28 @@
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .loader-inner{
+    width: 30rem;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .loader-inner{
+    width: 30rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .cards {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .loader-inner{
+    width: 30rem;
   }
 }
