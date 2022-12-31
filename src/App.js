@@ -2,7 +2,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './style.css';
 import axios from 'axios';
-import NavBar from './NavBar.js';
+const NavBar = React.lazy(() => import('./NavBar.js'));
 const Home = React.lazy(() => import('./Home.js'));
 import Loader from './Loader.js';
 import Contribute from './Hamburger/Contribute.js';
@@ -67,16 +67,18 @@ export default function App() {
       {posts.length > 0 ? (
         <div>
           <BrowserRouter>
-            <NavBar showFavs={showFavorites} showSearch={showSearch} />
-            <Routes>
-              <Route path="" element={element('')}></Route>
-              <Route path="search" element={element(searchText)}></Route>
-              <Route path="favorite" element={element('')}></Route>
-              <Route
-                path="contribute"
-                element={<Contribute inputData={inputData} />}
-              ></Route>
-            </Routes>
+            <Suspense fallback={<Loader />}>
+              <NavBar showFavs={showFavorites} showSearch={showSearch} />
+              <Routes>
+                <Route path="" element={element('')}></Route>
+                <Route path="search" element={element(searchText)}></Route>
+                <Route path="favorite" element={element('')}></Route>
+                <Route
+                  path="contribute"
+                  element={<Contribute inputData={inputData} />}
+                ></Route>
+              </Routes>
+            </Suspense>
           </BrowserRouter>
         </div>
       ) : (

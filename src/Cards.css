@@ -20,7 +20,6 @@
 
 .loader-inner {
   content: url('./fav.svg');
-  width: 35rem;
 }
 
 .cards {
