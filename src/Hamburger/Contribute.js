@@ -28,27 +28,25 @@ const Contribute = ({ inputData }) => {
       <h2>Contribute</h2>
       <label>
         <div>lyric:</div>
-        <input
+        <textarea
           value={lyric}
           name="lyric"
           onChange={onChange}
-          className="contributed-lyric"
+          className="input-box"
           type="text"
-          placeholder={' Easy come, easy go, will you let me go?'}
-          className="search-inside"
+          placeholder={'A single word can make a heart open'}
           required
         />
       </label>
       <label>
         <div>source:</div>
-        <input
+        <textarea
           value={source}
           name="source"
           onChange={onChange}
-          className="contributed-source"
+          className="input-box"
           type="text"
-          placeholder={' Queen - Bohemian Rhapsody'}
-          className="search-inside"
+          placeholder={'Rachel Platten - Fight Song'}
           required
         />
         {(source !== '' || lyric !== '') && (

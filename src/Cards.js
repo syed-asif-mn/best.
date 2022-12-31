@@ -1,5 +1,5 @@
-import React from 'react';
-import Card from './Card';
+import React, {Suspense} from 'react';
+const Card = React.lazy(() => import('./Card'));
 import './Cards.css';
 
 var FavCards = [];
@@ -8,6 +8,7 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
   const showCards = (source) => {
     source = shuffle(source);
     return (
+      <Suspense>
       <div className="cards">
         {source.map((obj, key) => (
           <div key={key}>
@@ -19,6 +20,7 @@ const Cards = ({ lyricData, searchText, showFavs }) => {
           </div>
         ))}
       </div>
+      </Suspense>
     );
   };
 

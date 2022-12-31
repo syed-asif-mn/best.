@@ -1,7 +1,7 @@
-import React from 'react';
-import Cards from './Cards.js';
+import React, { Suspense } from 'react';
 import Search from './Hamburger/Search.js';
 import './Home.css';
+const Cards = React.lazy(() => import('./Cards.js'));
 
 const searchEnabled = (updateText) => {
   window.scrollTo(0, 0);
@@ -29,11 +29,13 @@ const Home = ({
         best.
       </div>
       {showSearchBar ? searchEnabled(updateText) : null}
-      <Cards
-        lyricData={posts}
-        searchText={searchText}
-        showFavs={showFavoriteCards}
-      />
+      <Suspense>
+        <Cards
+          lyricData={posts}
+          searchText={searchText}
+          showFavs={showFavoriteCards}
+        />
+      </Suspense>
     </div>
   );
 };

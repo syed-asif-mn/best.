@@ -50,15 +50,15 @@ export default function App() {
 
   const element = (text) => {
     return (
-      <Suspense fallback={ <Loader />}>
-       <Home
-        posts={posts}
-        showSearchBar={showSearchBar}
-        showFavoriteCards={showFavoriteCards}
-        searchText={text}
-        updateText={updateText}
-      />
-    </Suspense>
+      <Suspense fallback={<Loader />}>
+        <Home
+          posts={posts}
+          showSearchBar={showSearchBar}
+          showFavoriteCards={showFavoriteCards}
+          searchText={text}
+          updateText={updateText}
+        />
+      </Suspense>
     );
   };
 

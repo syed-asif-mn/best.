@@ -18,7 +18,7 @@ h2{
 }
 
 ::-webkit-input-placeholder {
-  font-size: 50%;
+  font-size: 80%;
   text-align: center;
 }
 
@@ -45,11 +45,14 @@ h2{
 
 label {
   width: 100%;
-  padding-top: 2rem;
+  padding-top: 1rem;
   font-size: 1rem;
   font-family: 'Allerta Stencil';
 }
 
-.search-inside{
-  padding-top: 0.25rem;
+.input-box{
+  margin-top: 1rem;
+  border: #e5aa70 0.15rem solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
