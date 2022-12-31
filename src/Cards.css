@@ -20,7 +20,8 @@
 
 .loader-inner {
   content: url('./fav.svg');
-  width: 30vh;
+  padding-top: 2rem;
+  width: 70vh;
 }
 
 .cards {
@@ -58,6 +59,7 @@
   }
 
   @media only screen and (max-width: 1080px) {
+    
     .loader-inner{
       width: 100%;
     }
