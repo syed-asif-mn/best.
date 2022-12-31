@@ -1,5 +1,5 @@
 # best.
-In pursuit of timeless lyrics
+In pursuit of timeless lyrics.
 
 https://best-lyrics.stackblitz.io/
 
