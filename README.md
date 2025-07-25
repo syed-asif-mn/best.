@@ -2,6 +2,6 @@
 
 In pursuit of timeless lyrics.
 
-[View Website](https://best-lyrics.stackblitz.io/)
+[View Website](https://best-lyrics.vercel.app/)
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/best-lyrics)
+[Edit on StackBlitz⚡️](https://stackblitz.com/edit/best-lyrics)
