@@ -7,7 +7,7 @@ const Home = React.lazy(() => import('./Home.js'));
 import Loader from './Loader.js';
 import Contribute from './Hamburger/Contribute.js';
 
-const API_URL = 'https://best-lyrics.glitch.me/lyricdata';
+const API_URL = 'https://gist.github.com/syed-asif-mn/c27eef71f0c9e4e0f8534664e790a87c';
 
 export default function App() {
   const [showSearchBar, setShowSearchBar] = useState(false);
@@ -37,13 +37,7 @@ export default function App() {
   }, []);
 
   const inputData = async (data) => {
-    await axios
-      .post(API_URL, data, {
-        headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Content-Type': 'application/json',
-        },
-      })
+    await axios.get(API_URL)
       .then((res) => console.log(res))
       .catch((err) => alert(err));
   };
