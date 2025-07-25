@@ -7,7 +7,7 @@ const Home = React.lazy(() => import('./Home.js'));
 import Loader from './Loader.js';
 import Contribute from './Hamburger/Contribute.js';
 
-const API_URL = 'https://gist.github.com/syed-asif-mn/c27eef71f0c9e4e0f8534664e790a87c';
+const API_URL = 'https://gist.githubusercontent.com/syed-asif-mn/c27eef71f0c9e4e0f8534664e790a87c/raw/863ebcf86626fba882f5beef97b361b2528d4f31/lyrics.json';
 
 export default function App() {
   const [showSearchBar, setShowSearchBar] = useState(false);
